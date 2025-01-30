@@ -1,29 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nature Platter </title>
+
+    <!-- daisy ui cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/bb06e7e05f.js" crossorigin="anonymous"></script>
+
     <!-- tailwind css add  -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .custom-login-btn {
+            @apply btn bg-white text-black hover:bg-white border border-gray-200;
+        }
+        .custom-register-btn {
+            @apply btn bg-green-600 text-white hover:bg-green-700 border-none;
+        }
+    </style>
 </head>
 <body>
     <header>
         <!-- navbar start  -->
-         <nav>
-            <div>
-                <img src="images/logo-header.png" alt="">
-            </div>
-            <div>
-                <a href="">Product</a>
-                <a href="">Services</a>
-                <a href="">Contact Us</a>
-            </div>
 
-            <div>
-                <button>Login</button>
+        <nav>
+            <div class="navbar bg-base-100 px-4 md:px-8">
+                <!-- Left Side - Logo & Mobile Menu -->
+                <div class="navbar-start">
+                    <!-- Mobile Menu -->
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a class="">Product</a></li>
+                            <li><a class="">Services</a></li>
+                            <li><a class="">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Logo -->
+                    <a class="flex items-center gap-2">
+                        <img src="images/logo-header.png" alt="Nature's Platter" class="h-8">
+                    </a>
+                </div>
+
+                <!-- Center - Desktop Menu -->
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class=" hover:text-green-600">Product</a></li>
+                        <li><a class=" hover:text-green-600">Services</a></li>
+                        <li><a class=" hover:text-green-600">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right Side - Icons & Buttons -->
+                <div class="navbar-end gap-6">
+                    <i class="fa-solid fa-magnifying-glass text-gray-600 cursor-pointer hover:text-green-600"></i>
+                    <i class="fa-solid fa-cart-shopping text-gray-600 cursor-pointer hover:text-green-600"></i>
+                    <a class="btn min-h-0 h-8 bg-white text-black border border-green-500 hidden  px-8 sm:flex hover:bg-green-600  ">Login</a>
+                    <a class="btn min-h-0 h-8 bg-green-600 text-white hover:bg-green-700 border-none hidden px-8 sm:flex ">Register</a>
+                </div>
             </div>
-         </nav>
+        </nav>
     </header>
 
     <main></main>
