@@ -28,3 +28,5 @@
     animation: fade-in 1s ease-in-out 0.5s forwards;
     opacity: 0; /* Ensures animation starts from invisible */
   }
+
+ 
